@@ -122,14 +122,6 @@ scripts/run_experiments.py
 .github/workflows/ci.yml
 ```
 
-## Resume Framing
-
-This repo is structured to support the following resume bullets:
-
-- Built a trace-driven CPU and memory-system simulator in C++ modeling a simplified out-of-order core with configurable pipeline width, reorder buffer size, and cache parameters.
-- Implemented branch prediction and cache modeling to study the impact of control flow and memory behavior on overall performance.
-- Evaluated design tradeoffs across benchmark traces by measuring IPC, miss rates, and stall behavior under different microarchitectural configurations.
-
 ## Notes
 
 - The simulator does not model register dependencies, load/store ordering hazards, multi-level caches, or wrong-path execution.
