@@ -42,6 +42,22 @@ Run the simulator on one of the included traces:
 ./build/td_sim --trace traces/branchy.trace --width 2 --rob 32 --predictor two_bit --cache-assoc 4 --json
 ```
 
+Sample output from `traces/mixed.trace` with `width=4`, `rob=64`, a two-bit branch predictor, and a 4-way 16KB cache:
+
+```text
+Trace: mixed.trace
+Config:
+  width=4, rob=64, predictor=two_bit, cache=16KB 4-way set-associative, line=64B, sets=64
+Performance:
+  cycles=878, committed=768, IPC=0.8747
+Branching:
+  branches=149, mispredictions=55, accuracy=63.0872%
+Cache:
+  accesses=405, hits=31, misses=374, miss_rate=92.3457%
+Stalls:
+  branch_frontend=330, rob_frontend=267, issue=647, commit=652, head_memory=651
+```
+
 Run a small experiment sweep:
 
 ```bash
